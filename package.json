@@ -1,0 +1,18 @@
+{
+  "name": "tickmarktools-qa",
+  "version": "1.0.0",
+  "description": "Reusable automated QA/browser test suite for tickmarktools.com",
+  "private": true,
+  "scripts": {
+    "discover": "node discover-urls.js",
+    "test": "playwright test",
+    "test:site": "playwright test tests/site-wide.spec.js",
+    "test:tools": "playwright test tests/tools",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@axe-core/playwright": "^4.10.0"
+  }
+}
